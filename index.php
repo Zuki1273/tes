@@ -22,8 +22,8 @@
             </tr>
             <tr>
                 <td>9</td>
-                <td>E020323666</td>
-                <td>Setan</td>
+                <td>E020323066</td>
+                <td>Johan</td>
             </tr>
         </tbody>
     </table>
