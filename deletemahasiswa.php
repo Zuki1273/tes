@@ -8,5 +8,4 @@ $query = "DELETE FROM mahasiswa WHERE nim ='$nim'";
 mysqli_query($conn, $query);
 
 header("Location:index.php");
-
 ?>
