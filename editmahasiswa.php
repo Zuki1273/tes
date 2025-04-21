@@ -7,6 +7,7 @@ $data = ambildata($query);
 $nim = $_GET['nim'];
 $querymahasiswa = "SELECT * FROM mahasiswa WHERE nim = '$nim'";
 $datamahasiswa = ambildata($querymahasiswa);
+$datamahasiswa = $datamahasiswa[0];
 ?>
 
 <!DOCTYPE html>
@@ -19,34 +20,44 @@ $datamahasiswa = ambildata($querymahasiswa);
 
 <body>
     <h1>Edit Data Mahasiswa</h1>
-    <form action="tambahaksimahasiswa.php" method="post">
+    <form action="editaksimahasiswa.php" method="post">
         <table>
             <tr>
                 <td>NIM</td>
-                <td><input type="text" name="nim"></td>
+                <td><input type="text" name="nim" required value="<?=
+                $datamahasiswa['nim']; ?>"></td>
             </tr>
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama"></td>
+                <td><input type="text" name="nama" required value="<?=
+                $datamahasiswa['nama']; ?>"></td>
             </tr>
             <tr>
                 <td>Tanggal Lahir</td>
-                <td><input type="date" name="tanggal_lahir"></td>
+                <td><input type="date" name="tanggal_lahir" required value="<?=
+                $datamahasiswa['tanggal_lahir']; ?>"></td>
             </tr>
             <tr>
                 <td>No Telepon</td>
-                <td><input type="text" name="nomor_telepon"></td>
+                <td><input type="text" name="nomor_telepon" required value="<?=
+                $datamahasiswa['nomor_telepon']; ?>"></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input type="email" name="email"></td>
+                <td><input type="email" name="email" required value="<?=
+                $datamahasiswa['email']; ?>"></td>
             </tr>
             <tr>
                 <td>Prodi</td>
                 <td>
                     <select name="id_prodi">
                     <?php foreach($data as $d) : ?>
-                        <option value="<?php echo $d["id"] ?>"><?php echo $d["nama"] ?></option>
+                        <option value="<?php echo $d["id"] ?>" 
+                        <?=
+                        $d['id'] == $datamahasiswa['id_prodi'] ?
+                        "SELECTED" : ""
+                        ?>
+                        ?> <?php echo $d["nama"] ?></option>
                     <?php endforeach; ?>
                     </select>
                 </td>

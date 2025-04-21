@@ -19,23 +19,23 @@ $data = ambildata($query);
         <table>
             <tr>
                 <td>NIM</td>
-                <td><input type="text" name="nim"></td>
+                <td><input type="text" name="nim" required></td>
             </tr>
             <tr>
                 <td>Nama</td>
-                <td><input type="text" name="nama"></td>
+                <td><input type="text" name="nama" required></td>
             </tr>
             <tr>
                 <td>Tanggal Lahir</td>
-                <td><input type="date" name="tanggal_lahir"></td>
+                <td><input type="date" name="tanggal_lahir" required></td>
             </tr>
             <tr>
                 <td>No Telepon</td>
-                <td><input type="text" name="nomor_telepon"></td>
+                <td><input type="text" name="nomor_telepon" required></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input type="email" name="email"></td>
+                <td><input type="email" name="email" required></td>
             </tr>
             <tr>
                 <td>Prodi</td>
