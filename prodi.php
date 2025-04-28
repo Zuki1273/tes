@@ -1,4 +1,5 @@
 <?php
+
 include "koneksi.php";
 
 $query = "SELECT * FROM prodi";
